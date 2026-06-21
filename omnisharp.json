@@ -1,0 +1,16 @@
+{
+  "msbuild": {
+    "enabled": true,
+    "useLegacySdkResolver": false
+  },
+  "sdk": {
+    "includePrerelease": false
+  },
+  "RoslynExtensionsOptions": {
+    "EnableAnalyzersSupport": true,
+    "EnableImportCompletion": true,
+    "EnableDecompilationSupport": true
+  },
+  "omnisharp.useModernNet": true,
+  "dotnet.defaultSolution": "MyApiRest.sln"
+}

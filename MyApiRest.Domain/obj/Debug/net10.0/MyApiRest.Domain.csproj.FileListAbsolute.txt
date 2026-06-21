@@ -1,0 +1,11 @@
+/home/mchomem/MyApiRest/MyApiRest.Domain/bin/Debug/net10.0/MyApiRest.Domain.deps.json
+/home/mchomem/MyApiRest/MyApiRest.Domain/bin/Debug/net10.0/MyApiRest.Domain.dll
+/home/mchomem/MyApiRest/MyApiRest.Domain/bin/Debug/net10.0/MyApiRest.Domain.pdb
+/home/mchomem/MyApiRest/MyApiRest.Domain/obj/Debug/net10.0/MyApiRest.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/mchomem/MyApiRest/MyApiRest.Domain/obj/Debug/net10.0/MyApiRest.Domain.AssemblyInfoInputs.cache
+/home/mchomem/MyApiRest/MyApiRest.Domain/obj/Debug/net10.0/MyApiRest.Domain.AssemblyInfo.cs
+/home/mchomem/MyApiRest/MyApiRest.Domain/obj/Debug/net10.0/MyApiRest.Domain.csproj.CoreCompileInputs.cache
+/home/mchomem/MyApiRest/MyApiRest.Domain/obj/Debug/net10.0/MyApiRest.Domain.dll
+/home/mchomem/MyApiRest/MyApiRest.Domain/obj/Debug/net10.0/refint/MyApiRest.Domain.dll
+/home/mchomem/MyApiRest/MyApiRest.Domain/obj/Debug/net10.0/MyApiRest.Domain.pdb
+/home/mchomem/MyApiRest/MyApiRest.Domain/obj/Debug/net10.0/ref/MyApiRest.Domain.dll

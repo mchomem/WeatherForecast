@@ -1,0 +1,15 @@
+@baseUrl = http://localhost:5001
+
+GET {{baseUrl}}/weatherforecast/
+Accept: application/json
+###
+
+POST {{baseUrl}}/weatherforecast
+User-Agent: MyApiRest
+Content-Type: application/json
+
+{
+    "latitude": 10,
+    "longitude": 20
+}
+###

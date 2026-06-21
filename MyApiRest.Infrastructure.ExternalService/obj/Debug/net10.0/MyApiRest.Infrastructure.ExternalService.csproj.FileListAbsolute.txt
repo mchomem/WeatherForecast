@@ -1,0 +1,17 @@
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/bin/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.deps.json
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/bin/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.dll
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/bin/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.pdb
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/bin/Debug/net10.0/MyApiRest.Application.dll
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/bin/Debug/net10.0/MyApiRest.Domain.dll
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/bin/Debug/net10.0/MyApiRest.Application.pdb
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/bin/Debug/net10.0/MyApiRest.Domain.pdb
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.csproj.AssemblyReference.cache
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.GeneratedMSBuildEditorConfig.editorconfig
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.AssemblyInfoInputs.cache
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.AssemblyInfo.cs
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.csproj.CoreCompileInputs.cache
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/MyApiRes.4DBCD67E.Up2Date
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.dll
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/refint/MyApiRest.Infrastructure.ExternalService.dll
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/MyApiRest.Infrastructure.ExternalService.pdb
+/home/mchomem/MyApiRest/MyApiRest.Infrastructure.ExternalService/obj/Debug/net10.0/ref/MyApiRest.Infrastructure.ExternalService.dll

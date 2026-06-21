@@ -1,0 +1,9 @@
+{
+  "omnisharp.useModernNet": true,
+  "omnisharp.dotNetCliPaths": [
+    "/usr/bin/dotnet"
+  ],
+  "omnisharp.sdkPath": "/usr/lib/dotnet/sdk/8.0.122",
+  "omnisharp.sdkVersion": "8.0.122",
+  "dotnet.defaultSolution": "disable"
+}
