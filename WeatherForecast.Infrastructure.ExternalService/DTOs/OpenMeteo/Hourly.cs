@@ -1,4 +1,4 @@
-namespace WeatherForecast.Infrastructure.ExternalService.OpenMeteo.DTOs;
+namespace WeatherForecast.Infrastructure.ExternalService.DTOs.OpenMeteo;
 
 public class Hourly
 {
