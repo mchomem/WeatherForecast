@@ -10,18 +10,14 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly IWeatherServices _weatherService;
-
     private readonly ILogger<WeatherForecastController> _logger;
-    private readonly HttpClient _httpClient;
 
     public WeatherForecastController(
         ILogger<WeatherForecastController> logger
-        , IWeatherServices weatherService
-        , HttpClient httpClient)
+        , IWeatherServices weatherService)
     {
         _logger = logger;
         _weatherService = weatherService;
-        _httpClient = httpClient;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
@@ -38,8 +34,9 @@ public class WeatherForecastController : ControllerBase
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] CoordenatesInsertDto coordenates)
-    {     
+    {
         var result = await _weatherService.GetWeatherAsync(coordenates);
-        return Ok(result);
+        var response = new ApiResponse<Root>(result);
+        return Ok(response);
     }
 }
