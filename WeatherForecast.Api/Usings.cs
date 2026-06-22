@@ -1,10 +1,10 @@
-global using Microsoft.AspNetCore.Mvc;
-global using WeatherForecast.Core.Domain.Models;
-global using WeatherForecast.Core.Application.Dtos;
-global using WeatherForecast.Core.Application.Interfaces;
-global using WeatherForecast.Core.Application.Services;
-global using WeatherForecast.Core.Domain.Exceptions;
 global using System.Net;
 global using System.Text.Json;
+global using Microsoft.AspNetCore.Mvc;
 global using WeatherForecast.Api.Responses;
+global using WeatherForecast.Core.Application.Coordinates.Dtos;
+global using WeatherForecast.Core.Application.Interfaces;
+global using WeatherForecast.Core.Application.OpenMeteo.Dtos;
+global using WeatherForecast.Core.Domain.Exceptions;
+global using WeatherForecast.Core.Domain.Models;
 global using WeatherForecast.Infrastructure.IoC;

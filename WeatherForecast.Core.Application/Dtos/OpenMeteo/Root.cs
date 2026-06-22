@@ -1,4 +1,4 @@
-namespace WeatherForecast.Core.Application.Dtos;
+namespace WeatherForecast.Core.Application.OpenMeteo.Dtos;
 
 public class Root
 {

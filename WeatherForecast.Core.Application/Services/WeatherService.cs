@@ -9,7 +9,7 @@ public class WeatherService : IWeatherServices
         _openMeteoApiClient = openMeteoApiClient;
     }
 
-    private void CheckValues(CoordenatesInsertDto coordenates)
+    private void CheckValues(CoordinatesRequestDto coordenates)
     {
         if (coordenates.Latitude < -90 || coordenates.Latitude > 90)
             throw new CoordenatesInvalidLatitudeValueException();
@@ -18,11 +18,11 @@ public class WeatherService : IWeatherServices
             throw new CoordenatesInvalidLongitudeValueException();
     }
 
-    public async Task<Root> GetWeatherAsync(CoordenatesInsertDto coordenates)
+    public async Task<Root> GetWeatherAsync(CoordinatesRequestDto coordenates)
     {
         CheckValues(coordenates);
 
-        var weatherData = await _openMeteoApiClient.GetWeatherAsync(coordenates.Latitude, coordenates.Longitude);
+        var weatherData = await _openMeteoApiClient.GetWeatherAsync(coordenates);
 
         return weatherData;
     }

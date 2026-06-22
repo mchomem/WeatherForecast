@@ -4,8 +4,8 @@ public class ProfileMapping
 {
     public static void RegisterMappings(TypeAdapterConfig config)
     {
-        config.NewConfig<InfraDto.Root, AppDto.Root>().TwoWays();
-        config.NewConfig<InfraDto.Hourly, AppDto.Hourly>().TwoWays();
-        config.NewConfig<InfraDto.HourlyUnits, AppDto.HourlyUnits>().TwoWays();        
+        config.NewConfig<InfraDto.Root, AppOpenMeteoDto.Root>().TwoWays();
+        config.NewConfig<InfraDto.Hourly, AppOpenMeteoDto.Hourly>().TwoWays();
+        config.NewConfig<InfraDto.HourlyUnits, AppOpenMeteoDto.HourlyUnits>().TwoWays();        
     }
 }

@@ -13,11 +13,11 @@ public class OpenMeteoApiClient : IOpenMeteoApiClient
         _mapper = mapper;
     }
 
-    public async Task<AppDto.Root> GetWeatherAsync(double latitude, double longitude)
+    public async Task<AppOpenMeteoDto.Root> GetWeatherAsync(AppCoordinatesDto.CoordinatesRequestDto coordinates)
     {
         var urlBase = _configuration.GetSection("ExternalServices:OpenMeteoApi:UrlBase").Value!;
-        var response = await _httpClient.GetFromJsonAsync<InfraDto.Root>($"{urlBase}/forecast?latitude={latitude}&longitude={longitude}&hourly=temperature_2m");
-        var rootDto = _mapper.Map<AppDto.Root>(response!);
+        var response = await _httpClient.GetFromJsonAsync<InfraDto.Root>($"{urlBase}/forecast?latitude={coordinates.Latitude}&longitude={coordinates.Longitude}&hourly=temperature_2m");
+        var rootDto = _mapper.Map<AppOpenMeteoDto.Root>(response!);
         return rootDto;
     }
 }

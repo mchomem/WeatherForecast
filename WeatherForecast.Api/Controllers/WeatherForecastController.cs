@@ -33,7 +33,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> PostAsync([FromBody] CoordenatesInsertDto coordenates)
+    public async Task<IActionResult> PostAsync([FromBody] CoordinatesRequestDto coordenates)
     {
         var result = await _weatherService.GetWeatherAsync(coordenates);
         var response = new ApiResponse<Root>(result);
