@@ -1,6 +1,8 @@
 global using System.Net;
 global using System.Text.Json;
+global using FluentValidation;
 global using Microsoft.AspNetCore.Mvc;
+global using WeatherForecast.Api.Middlewares;
 global using WeatherForecast.Api.Responses;
 global using WeatherForecast.Core.Application.Coordinates.Dtos;
 global using WeatherForecast.Core.Application.Interfaces;

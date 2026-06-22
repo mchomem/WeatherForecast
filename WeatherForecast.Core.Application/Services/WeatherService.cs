@@ -3,24 +3,17 @@ namespace WeatherForecast.Core.Application.Services;
 public class WeatherService : IWeatherServices
 {
     private readonly IOpenMeteoApiClient _openMeteoApiClient;
+    private readonly IValidator<CoordinatesRequestDto> _validatorCoordinates;
 
-    public WeatherService(IOpenMeteoApiClient openMeteoApiClient)
+    public WeatherService(IOpenMeteoApiClient openMeteoApiClient, IValidator<CoordinatesRequestDto> validatorCoordinates)
     {
         _openMeteoApiClient = openMeteoApiClient;
-    }
-
-    private void CheckValues(CoordinatesRequestDto coordenates)
-    {
-        if (coordenates.Latitude < -90 || coordenates.Latitude > 90)
-            throw new CoordenatesInvalidLatitudeValueException();
-
-        if (coordenates.Longitude < -180 || coordenates.Longitude > 180)
-            throw new CoordenatesInvalidLongitudeValueException();
+        _validatorCoordinates = validatorCoordinates;
     }
 
     public async Task<Root> GetWeatherAsync(CoordinatesRequestDto coordenates)
     {
-        CheckValues(coordenates);
+        _validatorCoordinates.ValidateAndThrow(coordenates);
 
         var weatherData = await _openMeteoApiClient.GetWeatherAsync(coordenates);
 

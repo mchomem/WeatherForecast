@@ -21,6 +21,12 @@ public static class DependenceInjectionApi
 
         #endregion
 
+        #region Validators
+
+        services.AddScoped<IValidator<CoordinatesRequestDto>, CoordinatesRequestValidator>();
+
+        #endregion
+
         #region Mapster
 
         var config = new TypeAdapterConfig();

@@ -1,4 +1,4 @@
-namespace WeatherForecast.Api;
+namespace WeatherForecast.Api.Middlewares;
 
 public class ExceptionHandlingMiddleware
 {
@@ -34,6 +34,13 @@ public class ExceptionHandlingMiddleware
         {
             case BusinessException businessException:
                 response = new ApiResponse<string>(businessException.Message, "Violação de regra de negócio", false);
+                statusCode = (int)HttpStatusCode.BadRequest;
+                break;
+
+            case ValidationException validationException:
+                var formattedMessage = string.Join(" ", validationException.Errors.Select((e, index) => $"Erro {index + 1}: {e.ErrorMessage}"));
+
+                response = new ApiResponse<string>(formattedMessage, "Erro de validação", false);
                 statusCode = (int)HttpStatusCode.BadRequest;
                 break;
 
