@@ -4,6 +4,9 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Folder Name="/0 - Test/">
+    <Project Path="WeatherForecast.Test/WeatherForecast.Test.csproj" />
+  </Folder>
   <Folder Name="/1 - Core/">
     <Project Path="WeatherForecast.Core.Application/WeatherForecast.Core.Application.csproj" />
     <Project Path="WeatherForecast.Core.Domain/WeatherForecast.Core.Domain.csproj" />
