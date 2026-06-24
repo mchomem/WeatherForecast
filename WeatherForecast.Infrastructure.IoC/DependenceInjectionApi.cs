@@ -16,7 +16,7 @@ public static class DependenceInjectionApi
         {
             client.BaseAddress = new Uri(configuration["ExternalServices:OpenMeteoApi:UrlBase"] ?? string.Empty);
             client.DefaultRequestHeaders.Add("Accept", "application/json");
-            client.DefaultRequestHeaders.Add("User-Agent", "WeatherForecast");
+            client.DefaultRequestHeaders.Add("User-Agent", "WeatherForecast/1.0");
         });
 
         #endregion
@@ -34,7 +34,7 @@ public static class DependenceInjectionApi
         services.AddSingleton(config);
         services.AddScoped<IMapper, ServiceMapper>();
         services.AddMapster();
-    
+
         #endregion
     }
 }
