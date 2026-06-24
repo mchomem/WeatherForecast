@@ -19,7 +19,7 @@ public class WeatherService : IWeatherServices
 
     public async Task<Dtos.OpenMeteo.Root> GetWeatherAsync(CoordinatesRequestDto coordenates)
     {
-        _validatorCoordinates.ValidateAndThrow(coordenates);
+        await _validatorCoordinates.ValidateAndThrowAsync(coordenates);
         var weatherData = await _openMeteoApiClient.GetWeatherAsync(coordenates);
         return weatherData;
     }
@@ -55,7 +55,7 @@ public class WeatherService : IWeatherServices
         return weatherResponse;
     }
 
-    private string GetSummary(double temperatureC)
+    private static string GetSummary(double temperatureC)
     {
         switch (temperatureC)
         {
