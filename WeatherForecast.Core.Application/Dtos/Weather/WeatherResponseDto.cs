@@ -1,6 +1,6 @@
 namespace WeatherForecast.Core.Application.Dtos.Weather;
 
-public class WeatherResponseDto
+public sealed class WeatherResponseDto
 {
     public required string CityName { get; init; }
     public required string State { get; init; }

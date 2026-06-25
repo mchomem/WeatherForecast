@@ -1,6 +1,6 @@
 namespace WeatherForecast.Infrastructure.ExternalService.DTOs.OpenMeteo;
 
-public class Hourly
+public sealed class Hourly
 {
     [JsonPropertyName("time")]
     public required List<string> Time { get; init; }

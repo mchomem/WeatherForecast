@@ -1,6 +1,6 @@
 namespace WeatherForecast.Core.Application.Dtos.OpenMeteo;
 
-public class Hourly
+public sealed class Hourly
 {
     public required List<string> Time { get; init; }
 

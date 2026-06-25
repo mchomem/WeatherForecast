@@ -1,6 +1,6 @@
 namespace WeatherForecast.Infrastructure.ExternalService.DTOs.OpenMeteo;
 
-public class Root
+public sealed class Root
 {
     [JsonPropertyName("latitude")]
     public required double Latitude { get; init; }

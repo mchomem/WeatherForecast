@@ -1,6 +1,6 @@
 namespace WeatherForecast.Infrastructure.ExternalService.DTOs.OpenMeteo.Geocoding;
 
-public class Result
+public sealed class Result
 {
     [JsonPropertyName("id")]
     public required long Id { get; init; }

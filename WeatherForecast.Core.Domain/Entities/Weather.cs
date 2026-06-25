@@ -1,6 +1,6 @@
 namespace WeatherForecast.Core.Domain.Entities;
 
-public class Weather
+public sealed class Weather
 {
     public Weather(string cityName, string state, string country, double latitude, double longitude, string timezone, double temperatureCelsius)
     {
@@ -11,8 +11,6 @@ public class Weather
         Longitude = longitude;
         Timezone = timezone;
         TemperatureCelsius = temperatureCelsius;
-        TemperatureFahrenheit = 0;
-        Summary = string.Empty;
     }
 
     public string CityName { get; private set; }
@@ -22,8 +20,8 @@ public class Weather
     public double Longitude { get; private set; }
     public string Timezone { get; private set; }
     public double TemperatureCelsius { get; private set; }
-    public double TemperatureFahrenheit { get; private set; }
-    public string Summary { get; private set; }
+    public double? TemperatureFahrenheit { get; private set; }
+    public string? Summary { get; private set; }
 
     public void ConvertToFahrenheit()
     {

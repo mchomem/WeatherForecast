@@ -1,6 +1,6 @@
 namespace WeatherForecast.Infrastructure.ExternalService.DTOs.OpenMeteo.Geocoding;
 
-public class Root
+public sealed class Root
 {
     [JsonPropertyName("results")]
     public List<Result>? Results { get; set; }

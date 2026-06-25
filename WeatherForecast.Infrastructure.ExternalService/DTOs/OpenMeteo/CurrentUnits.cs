@@ -1,6 +1,6 @@
 namespace WeatherForecast.Infrastructure.ExternalService.DTOs.OpenMeteo;
 
-public class CurrentUnits
+public sealed class CurrentUnits
 {
     [JsonPropertyName("time")]
     public string? Time { get; set; }

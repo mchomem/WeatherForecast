@@ -1,6 +1,6 @@
 namespace WeatherForecast.Core.Application.Dtos.OpenMeteo;
 
-public class Root
+public sealed class Root
 {
     public required double Latitude { get; init; }
 

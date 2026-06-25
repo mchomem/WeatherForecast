@@ -1,6 +1,6 @@
 namespace WeatherForecast.Core.Application.Dtos.OpenMeteo;
 
-public class CurrentUnits
+public sealed class CurrentUnits
 {
     public string? Time { get; set; }
 

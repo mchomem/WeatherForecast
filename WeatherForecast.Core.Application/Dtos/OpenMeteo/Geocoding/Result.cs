@@ -1,6 +1,6 @@
 namespace WeatherForecast.Core.Application.Dtos.OpenMeteo.Geocoding;
 
-public class Result
+public sealed class Result
 {
     public required long Id { get; init; }
 

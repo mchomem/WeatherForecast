@@ -1,6 +1,6 @@
 namespace WeatherForecast.Core.Application.Dtos.City;
 
-public class CityRequestDto
+public sealed class CityRequestDto
 {
     public required string Name { get; init; }
 

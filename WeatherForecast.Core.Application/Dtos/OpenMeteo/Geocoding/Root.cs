@@ -1,6 +1,6 @@
 namespace WeatherForecast.Core.Application.Dtos.OpenMeteo.Geocoding;
 
-public class Root
+public sealed class Root
 {
     public List<Result>? Results { get; set; }
 
