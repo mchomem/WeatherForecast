@@ -4,18 +4,23 @@ public class WeatherService : IWeatherServices
 {
     private readonly IOpenMeteoApiClient _openMeteoApiClient;
     private readonly IValidator<CoordinatesRequestDto> _validatorCoordinates;
+    private readonly IValidator<CityRequestDto> _validatorCity;
     private readonly IMapper _mapper;
 
-    public WeatherService(IOpenMeteoApiClient openMeteoApiClient, IValidator<CoordinatesRequestDto> validatorCoordinates, IMapper mapper)
+    public WeatherService(IOpenMeteoApiClient openMeteoApiClient,
+        IValidator<CoordinatesRequestDto> validatorCoordinates,
+        IValidator<CityRequestDto> validatorCity,
+        IMapper mapper)
     {
         _openMeteoApiClient = openMeteoApiClient;
         _validatorCoordinates = validatorCoordinates;
+        _validatorCity = validatorCity;
         _mapper = mapper;
     }
 
     public async Task<Dtos.OpenMeteo.Geocoding.Root> GetCityCoordinatesAsync(CityRequestDto cityRequest)
     {
-        // TODO: inserir validação de CityRequestDto
+        await _validatorCity.ValidateAndThrowAsync(cityRequest);
         var cityCoordinates = await _openMeteoApiClient.GetCityCoordinatesAsync(cityRequest);
         return cityCoordinates;
     }

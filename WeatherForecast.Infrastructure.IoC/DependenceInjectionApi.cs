@@ -24,6 +24,7 @@ public static class DependenceInjectionApi
         #region Validators
 
         services.AddScoped<IValidator<CoordinatesRequestDto>, CoordinatesRequestValidator>();
+        services.AddScoped<IValidator<CityRequestDto>, CityRequestValidator>();
 
         #endregion
 
