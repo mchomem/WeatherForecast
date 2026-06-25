@@ -27,7 +27,6 @@ public class WeatherForecastController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] CoordinatesRequestDto coordenates)
     {
-        coordenates.Frequency = Frequency.Hourly;
         var result = await _weatherService.GetWeatherAsync(coordenates);
         var response = new ApiResponse<Core.Application.Dtos.OpenMeteo.Root>(result);
         _logger.LogInformation("Weather data retrieved successfully for coordinates: {Latitude}, {Longitude}", coordenates.Latitude, coordenates.Longitude);
