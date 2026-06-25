@@ -15,6 +15,7 @@ public class WeatherService : IWeatherServices
 
     public async Task<Dtos.OpenMeteo.Geocoding.Root> GetCityCoordinatesAsync(CityRequestDto cityRequest)
     {
+        // TODO: inserir validação de CityRequestDto
         var cityCoordinates = await _openMeteoApiClient.GetCityCoordinatesAsync(cityRequest);
         return cityCoordinates;
     }
@@ -49,9 +50,9 @@ public class WeatherService : IWeatherServices
             throw new WeatherNotFoundException();
 
         var weather = new Weather(
-            cityRequest.Name,
-            cityRequest.State,
-            cityCoordinnates.Results.FirstOrDefault()?.Country ?? string.Empty,
+            cityRequest.Name.ToUpper(),
+            cityRequest.State.ToUpper(),
+            cityCoordinnates.Results.FirstOrDefault()?.Country.ToUpper() ?? string.Empty,
             coordinatesRequest.Latitude,
             coordinatesRequest.Longitude,
             weatherData.Timezone,
