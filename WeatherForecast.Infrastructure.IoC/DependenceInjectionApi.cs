@@ -2,7 +2,7 @@
 
 public static class DependenceInjectionApi
 {
-    public static void AddInfrastructureApi(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfrastructureApi(this IServiceCollection services, IConfiguration configuration)
     {
         #region Services
 
@@ -37,6 +37,37 @@ public static class DependenceInjectionApi
         services.AddScoped<IMapper, ServiceMapper>();
 
         #endregion
+
+        return services;
+    }
+
+    public static IServiceCollection AddInfrastructureSwagger(this IServiceCollection services)
+    {
+        var contactSite = "https://www.linkedin.com/in/misael-da-costa-homem-8b07a158/";
+
+        services.AddEndpointsApiExplorer();
+        services.AddSwaggerGen(options =>
+        {
+            options.SwaggerDoc(
+                "v1"
+                , new OpenApiInfo
+                {
+                    Title = "WeatherForecast.Api",
+                    Version = "v1",
+                    Description = "Web Api to weather forecast management.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Misael da Costa Homem",
+                        Url = new Uri(contactSite)
+                    },
+                });
+
+            string xmlFile = "WeatherForecast.Api.xml";
+            string xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+            options.IncludeXmlComments(xmlPath);
+        });
+
+        return services;
     }
 
     public static IHostBuilder AddInfrastructureSerilog(this IHostBuilder host)

@@ -4,6 +4,7 @@ global using MapsterMapper;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Hosting;
+global using Microsoft.OpenApi.Models;
 global using Serilog;
 global using WeatherForecast.Core.Application.Dtos.City;
 global using WeatherForecast.Core.Application.Dtos.Coordinates;
