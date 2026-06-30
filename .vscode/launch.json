@@ -50,7 +50,7 @@
       "type": "pwa-chrome",
       "request": "launch",
       "url": "https://localhost:7182/swagger",
-      "userDataDir": "${env:TEMP}\\WeatherForecast.Chrome.Api",
+      "userDataDir": "${workspaceFolder}/.tmp/chrome-api",
       "runtimeArgs": [
         "--new-window",
         "--incognito"
@@ -61,7 +61,7 @@
       "type": "pwa-chrome",
       "request": "launch",
       "url": "https://localhost:7005",
-      "userDataDir": "${env:TEMP}\\WeatherForecast.Chrome.Web",
+      "userDataDir": "${workspaceFolder}/.tmp/chrome-web",
       "runtimeArgs": [
         "--new-window",
         "--incognito"

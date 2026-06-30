@@ -364,3 +364,6 @@ FodyWeavers.xsd
 
 # Text file
 *.txt
+
+# Local VS Code browser debug profiles
+.tmp/
