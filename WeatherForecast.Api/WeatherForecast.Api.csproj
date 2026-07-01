@@ -10,10 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\WeatherForecast.Infrastructure.IoC\WeatherForecast.Infrastructure.IoC.csproj" />
   </ItemGroup>
 
