@@ -43,6 +43,7 @@ public static class DependenceInjectionApi
 
     public static IServiceCollection AddInfrastructureSwagger(this IServiceCollection services, IConfiguration configuration)
     {
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(options =>
         {
